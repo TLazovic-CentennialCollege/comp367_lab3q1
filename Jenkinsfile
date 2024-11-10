@@ -16,15 +16,19 @@ pipeline {
  //        }
 	stage("myecho") {
             steps {
-		sh 'java -version'
-		echo '$JAVA_HOME'
+		    script {
+			sh 'java -version'
+			sh '$JAVA_HOME'
+		    }
             }		
 	}
         
 	stage('Maven Build') {
             steps {
-		echo 'Stage: Maven Build'
-                sh 'mvn -Dmaven.test.failure.ignore=true clean package -f welcomeToCOMP367_webapp/pom.xml'
+		    script {
+			echo 'Stage: Maven Build'
+                	sh 'mvn -Dmaven.test.failure.ignore=true clean package -f welcomeToCOMP367_webapp/pom.xml'
+		    }
             }
         }
     }
