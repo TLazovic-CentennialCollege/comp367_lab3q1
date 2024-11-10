@@ -3,7 +3,7 @@ pipeline {
 
     tools {
         maven "maven3.9.6"
-        jdk  ‘java-22.0.2’
+        jdk "JDK-22.0.2"
     }
     // environment {
     //     pomLocation = ""
