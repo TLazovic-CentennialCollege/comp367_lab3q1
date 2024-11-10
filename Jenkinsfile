@@ -16,8 +16,11 @@ pipeline {
  //            }
  //        }
 	stage("echo") {
+
+            steps {
 		sh 'java -version'
 		sh 'echo $JAVA_HOME'
+            }		
 	}
         
 	stage('Maven Build') {
