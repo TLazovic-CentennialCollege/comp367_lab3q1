@@ -16,7 +16,7 @@ pipeline {
  //        }
 	stage("myecho") {
             steps {
-		echo 'java -version'
+		sh 'java -version'
 		echo '$JAVA_HOME'
             }		
 	}
