@@ -14,13 +14,13 @@ pipeline {
  //                git branch: 'main', url: 'https://github.com/TLazovic-CentennialCollege/lab2q2_welcomeToCOMP367_webapp.git'
  //            }
  //        }
-	// stage("echo") {
+	stage("echo") {
 
- //            steps {
-	// 	sh 'java -version'
-	// 	sh 'echo $JAVA_HOME'
- //            }		
-	// }
+            steps {
+		sh 'java -version'
+		sh 'echo $JAVA_HOME'
+            }		
+	}
         
 	stage('Maven Build') {
             steps {
