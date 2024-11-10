@@ -3,25 +3,24 @@ pipeline {
 
     tools {
         maven "maven3.9.6"
-        jdk "JDK-22.0.2"
+        jdk "jdk-22.0.2"
     }
     // environment {
     //     pomLocation = ""
     // }
     stages {
-        
 	// stage('Checkout') {
  //            steps {
  //                git branch: 'main', url: 'https://github.com/TLazovic-CentennialCollege/lab2q2_welcomeToCOMP367_webapp.git'
  //            }
  //        }
-	stage("echo") {
+	// stage("echo") {
 
-            steps {
-		sh 'java -version'
-		sh 'echo $JAVA_HOME'
-            }		
-	}
+ //            steps {
+	// 	sh 'java -version'
+	// 	sh 'echo $JAVA_HOME'
+ //            }		
+	// }
         
 	stage('Maven Build') {
             steps {
