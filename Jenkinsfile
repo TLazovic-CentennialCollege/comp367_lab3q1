@@ -5,7 +5,9 @@ pipeline {
         maven "maven3.9.6"
         jdk "JDK"
     }
-
+    // environment {
+    //     pomLocation = ""
+    // }
     stages {
         
 	// stage('Checkout') {
@@ -17,7 +19,8 @@ pipeline {
 	stage('Maven Build') {
             steps {
 		echo 'Stage: Maven Build'
-                sh 'mvn -Dmaven.test.failure.ignore=true clean package'
+		
+                sh 'mvn -Dmaven.test.failure.ignore=true clean package -f welcomeToCOMP367_webapp/pom.xml'
             }
         }
     }
