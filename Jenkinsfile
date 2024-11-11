@@ -9,11 +9,6 @@ pipeline {
     //     pomLocation = ""
     // }
     stages {
-	// stage('Checkout') {
- //            steps {
- //                git branch: 'main', url: 'https://github.com/TLazovic-CentennialCollege/lab2q2_welcomeToCOMP367_webapp.git'
- //            }
- //        }
 	stage("myecho") {
             steps {
 		    script {
