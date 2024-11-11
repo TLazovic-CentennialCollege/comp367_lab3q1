@@ -15,22 +15,22 @@ pipeline {
                 git 'https://github.com/TLazovic-CentennialCollege/lab2q2_welcomeToCOMP367_webapp.git'  // Replace with your Git repository URL
             }
         }
-	stage("myecho") {
-            steps {
-		    script {
-			sh 'java -version'
-			sh '$JAVA_HOME'
-		    }
-            }		
-	}
+	// stage("myecho") {
+ //            steps {
+	// 	    script {
+	// 		sh 'java -version'
+	// 		sh '$JAVA_HOME'
+	// 	    }
+ //            }		
+	// }
         
-	stage('Maven Build') {
-            steps {
-		    script {
-			echo 'Stage: Maven Build'
-                	sh 'mvn -Dmaven.test.failure.ignore=true clean package -f welcomeToCOMP367_webapp/pom.xml'
-		    }
-            }
-        }
+	// stage('Maven Build') {
+ //            steps {
+	// 	    script {
+	// 		echo 'Stage: Maven Build'
+ //                	sh 'mvn -Dmaven.test.failure.ignore=true clean package -f welcomeToCOMP367_webapp/pom.xml'
+	// 	    }
+ //            }
+ //        }
     }
 }
