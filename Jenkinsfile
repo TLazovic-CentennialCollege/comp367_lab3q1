@@ -1,6 +1,9 @@
 pipeline {
     agent any
-
+	tools {
+	maven "maven3.9.6"
+	jdk "jdk-18.0.2.1"
+    }
     
     // environment {
     //     pomLocation = ""
@@ -23,10 +26,6 @@ pipeline {
 	// }
         
 	stage('Maven Build') {
-		tools {
-		maven "maven3.9.6"
-		jdk "jdk-18.0.2.1"
-	    }
             steps {
 			echo 'Stage: Maven Build'
 		    	sh 'mvn --version'
