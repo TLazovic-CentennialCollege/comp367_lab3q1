@@ -10,10 +10,10 @@ pipeline {
     // }
     stages {
 	stage('Checkout') {
-            // steps {
+            steps {
  //                // Checkout the project from the repository
  //                git 'https://github.com/TLazovic-CentennialCollege/lab2q2_welcomeToCOMP367_webapp.git'  // Replace with your Git repository URL
- //            }
+            }
         }
 	// stage("myecho") {
  //            steps {
