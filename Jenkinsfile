@@ -29,7 +29,8 @@ pipeline {
 	    }
             steps {
 			echo 'Stage: Maven Build'
-                	sh 'mvn -Dmaven.test.failure.ignore=true clean package -f welcomeToCOMP367_webapp/pom.xml'
+		    	sh 'mvn --version'
+                	// sh 'mvn -Dmaven.test.failure.ignore=true clean package -f welcomeToCOMP367_webapp/pom.xml'
             }
         }
     }
