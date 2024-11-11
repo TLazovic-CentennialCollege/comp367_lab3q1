@@ -11,9 +11,9 @@ pipeline {
     stages {
 	stage('Checkout') {
             steps {
-		    echo "hi"
+		    echo "Checkout Stage with EXPLICIT BRANCH, cID, REPO url"
  //                // Checkout the project from the repository
-                git 'https://github.com/TLazovic-CentennialCollege/lab2q2_welcomeToCOMP367_webapp.git'  // Replace with your Git repository URL
+                git branch: 'main', credentialsId: 'GitHubTLazovic-CentennialCollege', url: 'https://github.com/TLazovic-CentennialCollege/lab2q2_welcomeToCOMP367_webapp.git'  // Replace with your Git repository URL
             }
         }
 	// stage("myecho") {
